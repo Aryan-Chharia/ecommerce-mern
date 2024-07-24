@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import Home from './pages/Home';
 import About from './pages/About';
 import DonationPage from './pages/Donate';
+import LoginPage from './pages/Login';
+import HomePage from './pages/Home';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home />}
+            element={<HomePage />}
           />
           <Route
             path="/about"
@@ -23,6 +24,11 @@ function App() {
           <Route
             path="/donate"
             element={<DonationPage />}
+          />
+
+          <Route 
+            path="/login" 
+            element={<LoginPage />}  
           />
         </Routes>
         <Footer />

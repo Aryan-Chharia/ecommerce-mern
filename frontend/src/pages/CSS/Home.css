@@ -1,0 +1,246 @@
+/* Home.css */
+.home-container {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.banner {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.banner-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(74, 14, 78, 0.7);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.banner-btn:hover {
+    background: rgba(74, 14, 78, 0.9);
+}
+
+.banner-btn.left {
+    left: 20px;
+}
+
+.banner-btn.right {
+    right: 20px;
+}
+
+.slogan {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.slogan-content {
+    flex: 1;
+}
+
+.slogan h1 {
+    color: #4a0e4e;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.slogan p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.slogan-image {
+    flex: 1;
+    text-align: right;
+}
+
+.slogan-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    background-color: #4a0e4e;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+    margin: 0 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.stat-item h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.mission,
+.featured-projects,
+.cta {
+    margin-bottom: 2rem;
+}
+
+.mission h2,
+.featured-projects h2,
+.cta h2 {
+    color: #4a0e4e;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.mission p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.learn-more-button {
+    display: inline-block;
+    background-color: #4a0e4e;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #3a0b3e;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    color: #4a0e4e;
+    padding: 1rem;
+    margin: 0;
+}
+
+.project-card p {
+    padding: 0 1rem 1rem;
+    line-height: 1.6;
+}
+
+.cta {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.cta p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background-color: #4a0e4e;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.cta-button:hover {
+    background-color: #3a0b3e;
+}
+
+@media (max-width: 768px) {
+    .slogan {
+        flex-direction: column;
+    }
+
+    .slogan-image {
+        margin-top: 1rem;
+    }
+
+    .statistics {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        margin-bottom: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
