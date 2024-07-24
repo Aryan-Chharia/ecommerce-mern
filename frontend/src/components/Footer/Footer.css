@@ -1,0 +1,43 @@
+.footer {
+    background-color: #2c1e30;  /* Dark purple to match navbar */
+    color: #f8e1ff;  /* Light purple text */
+    padding: 2rem 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.social-icons {
+    margin-bottom: 1rem;
+}
+
+.icon-link {
+    color: #f8e1ff;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #d8b4e2;  /* Lighter purple on hover */
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #f8e1ff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d8b4e2;  /* Lighter purple on hover */
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #b39dbc;  /* Slightly muted color for copyright */
+}
