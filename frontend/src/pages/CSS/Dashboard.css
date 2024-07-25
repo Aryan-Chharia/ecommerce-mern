@@ -1,0 +1,56 @@
+/* src/CSS/Dashboard.css */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #4a0e4e;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #3a0b3e;
+}
+
+.sidebar a svg {
+    margin-right: 10px;
+}
+
+.dashboard-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.dashboard-content h2 {
+    color: #4a0e4e;
+    margin-bottom: 20px;
+}

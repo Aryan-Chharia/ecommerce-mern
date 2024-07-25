@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 import './CSS/Login.css';
 
 const LoginPage = () => {
@@ -10,6 +11,13 @@ const LoginPage = () => {
     password: ''
   });
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
+
+  // Static credentials
+  const validCredentials = {
+    username: 'employee',
+    password: 'ngo123'
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,8 +38,13 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Here you would typically send the login request to your server
-      console.log('Login submitted:', formData);
+      if (formData.username === validCredentials.username &&
+        formData.password === validCredentials.password) {
+        console.log('Login successful');
+        navigate('/dashboard');
+      } else {
+        setErrors({ login: "Invalid username or password" });
+      }
     }
   };
 
